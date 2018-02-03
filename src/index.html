@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node Socket.io Test</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="chat-box">
+            <div class="chat-content">
+                <ul class="content-list"></ul>
+            </div>
+            <form class="chat-control">
+                <div class="form-group">
+                    <input type="text" placeholder="输入聊天内容" id="user-content" class="user-content" autocomplete="off">
+                    <button id="send-button" class="send-button">发送</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script src="js/socket.io.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script>
+        var socket = io();
+        $(".chat-control").submit(() => {
+            socket.emit('chat message',$("#user-content").val());
+            $("#user-content").val('');
+            return false;
+        });
+        socket.on('chat message', (msg) => {
+            $(".chat-content .content-list").append(`<li>${msg}</li>`)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+body, h1, h2, h3, h4, h5, h6, ul, dl, ol, p {
+    margin: 0;
+    padding: 0;
+}
+/* HTML 5 BLOCK */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+li{
+    list-style: none;
+}
+input, button, select, textarea {
+    outline:none;
+    border: none;
+}
+
+/* =======================================================
+   Main
+======================================================= */
+html, body {
+    height: 100%;
+}
+body {
+    font: 16px Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+    overflow: hidden;
+}
+.container {
+    max-width: 800px;
+    min-width: 320px;
+    margin: 0px auto;
+    height: 100%;
+}
+.chat-box {
+    border: 1px solid #dadada;
+    background-color: #fff;
+    height: 100%;
+    position: relative;
+}
+.chat-content {
+    height: 100%;
+    overflow: auto;
+}
+.chat-content .content-list{
+    margin: 20px 20px 70px 20px;
+}
+.chat-content .content-list li{
+    margin: 10px 0px;
+    font-size: 18px;
+}
+.chat-control {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+}
+.chat-control .form-group {
+    height: 100%;
+    display: flex;
+}
+.chat-control .user-content {
+    display: inline-block;
+    flex: 7;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    text-indent: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.chat-control .send-button {
+    flex: 3;
+    height: 100%;
+    background-color: #2d2d2d;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    letter-spacing: 5px;
+}
