@@ -1,0 +1,68 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Node Socket.io Test
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+  body
+    .container
+      section.chat-box
+        .chat-content
+            ul.content-list
+        .chat-tip
+        form.chat-control
+            .form-group
+                input#user-content.user-content(type='text', placeholder='输入聊天内容', autocomplete='off')
+                button#send-button.send-button 发送
+        .chat-lead
+            form.lead-control
+                .control-item
+                    label.item-label 昵称
+                    input#user-name.user-name(type='text', autocomplete='off', value='')
+                .control-item
+                    label.item-label 形象
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/1.jpg', checked='checked')
+                        img.user-avatarImg(src='images/avatars/1.jpg', alt='胖虎')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/2.jpg')
+                        img.user-avatarImg(src='images/avatars/2.jpg', alt='金馆长')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/3.jpg')
+                        img.user-avatarImg(src='images/avatars/3.jpg', alt='元首')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/4.jpg')
+                        img.user-avatarImg(src='images/avatars/4.jpg', alt='比利·海灵顿')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/5.jpg')
+                        img.user-avatarImg(src='images/avatars/5.jpg', alt='王司徒')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/6.jpg')
+                        img.user-avatarImg(src='images/avatars/6.jpg', alt='诸葛亮')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/7.jpg')
+                        img.user-avatarImg(src='images/avatars/7.jpg', alt='张全蛋')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/8.jpg')
+                        img.user-avatarImg(src='images/avatars/8.jpg', alt='容麽麽')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/9.jpg')
+                        img.user-avatarImg(src='images/avatars/9.jpg', alt='唐马儒')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/10.jpg')
+                        img.user-avatarImg(src='images/avatars/10.jpg', alt='李云龙')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/11.jpg')
+                        img.user-avatarImg(src='images/avatars/11.jpg', alt='贝爷')
+                    .user-avatarItem
+                        input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/12.jpg')
+                        img.user-avatarImg(src='images/avatars/12.jpg', alt='傅园慧')
+                button.enter-chat 加入 ♂ 聊天
+
+    script(src='js/lib/socket.io.js')
+    script(src='js/lib/zepto.min.js')
+    script(src='js/common.js')
+      
+
