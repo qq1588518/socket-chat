@@ -30,6 +30,7 @@ body {
     min-width: 320px;
     margin: 0px auto;
     height: 100%;
+    overflow: hidden
 }
 .chat-box {
     border: 1px solid #dadada;
@@ -47,7 +48,8 @@ body {
 .chat-content .content-list li{
     margin: 10px 0px;
     font-size: 18px;
-    border-bottom: 1px solid #eee;
+    padding: 10px;
+    background: #f7f7f7;
 }
 .chat-content .content-list .list-info{
     line-height: 30px;
@@ -85,6 +87,7 @@ body {
     background-color: #000;
     position: absolute;
     bottom: 0;
+    z-index: 10001;
 }
 .chat-control .form-group {
     height: 100%;
@@ -92,7 +95,7 @@ body {
 }
 .chat-control .user-content {
     display: inline-block;
-    flex: 7;
+    flex: 6;
     height: 100%;
     border: none;
     background-color: transparent;
@@ -104,11 +107,21 @@ body {
 .chat-control .send-button {
     flex: 3;
     height: 100%;
-    background-color: #2d2d2d;
+    background-color: #1f97c5;
     color: #fff;
     font-size: 18px;
     cursor: pointer;
     letter-spacing: 5px;
+}
+.chat-control .online-people {
+    flex: 1;
+    height: 100%;
+    background-color: #000;
+    cursor: pointer;
+}
+.chat-control .online-people .icon-people {
+    font-size: 26px;
+    color: #fff;
 }
 
 /* =======================================================
@@ -120,7 +133,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff
+    background-color: #fff;
+    z-index: 10002;
 }
 .chat-lead .lead-control {
     margin: 4em;
@@ -180,4 +194,56 @@ body {
 }
 .chat-tip .tip-des span {
     color: #333;
+}
+
+/* =======================================================
+   Message
+======================================================= */
+.admin-message {
+    padding-bottom: 10px;
+    background-color: #36a910 !important;
+    color: #fff !important;
+}
+.admin-message .message-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: normal
+}
+.admin-message .message-content {
+    font-size: 12px;
+}
+.admin-message .people-all span {
+    font-size: 12px;
+    margin: 5px;
+}
+
+/* =======================================================
+   Online people
+======================================================= */
+.online-people-flbox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 101%;
+    background: #fff;
+    z-index: 10000;
+    overflow: scroll
+}
+.online-people-flbox .online-list {
+    color: #666;
+    padding: 20px;
+}
+.online-people-flbox .online-list li {
+    line-height: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+.online-people-flbox .online-list li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    vertical-align: middle;
+    padding-right: 10px;
 }
