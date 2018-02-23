@@ -6,6 +6,7 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
     title Node Socket.io Test
     link(rel='stylesheet', type='text/css', href='css/style.css')
+    link(rel='stylesheet', type='text/css', href='http://at.alicdn.com/t/font_565425_0c2iixr7fwh77gb9.css')
   body
     .container
       section.chat-box
@@ -15,7 +16,9 @@ html(lang='en')
         form.chat-control
             .form-group
                 input#user-content.user-content(type='text', placeholder='输入聊天内容', autocomplete='off')
-                button#send-button.send-button 发送
+                button#send-button.send-button(type='submit') 发送
+                button#online-people.online-people(type='button', title='在线用户')
+                    i.iconfont.icon-people
         .chat-lead
             form.lead-control
                 .control-item
@@ -60,9 +63,12 @@ html(lang='en')
                         input.user-avatarselect(type='radio', name='user-avatar', value='images/avatars/12.jpg')
                         img.user-avatarImg(src='images/avatars/12.jpg', alt='傅园慧')
                 button.enter-chat 加入 ♂ 聊天
-
+        .online-people-flbox
+            ul.online-list
+        
     script(src='js/lib/socket.io.js')
     script(src='js/lib/zepto.min.js')
+    script(src='js/lib/zepto.fx.min.js')
     script(src='js/common.js')
       
 
