@@ -88,6 +88,7 @@ body {
     position: absolute;
     bottom: 0;
     z-index: 10001;
+    overflow: hidden
 }
 .chat-control .form-group {
     height: 100%;
@@ -103,6 +104,7 @@ body {
     text-indent: 20px;
     font-size: 18px;
     letter-spacing: 2px;
+    overflow: hidden
 }
 .chat-control .send-button {
     flex: 3;
@@ -177,26 +179,6 @@ body {
 }
 
 /* =======================================================
-   Tip
-======================================================= */
-.chat-tip{
-    width: 100%;
-    height: 30px;
-    position: absolute;
-    top: 0;
-    color: #9e9e9e;
-    font-size: 14px;
-    text-align: center;
-}
-.chat-tip .tip-des{
-    margin: 0.5em 0em;
-    transition: all 0.4s;
-}
-.chat-tip .tip-des span {
-    color: #333;
-}
-
-/* =======================================================
    Message
 ======================================================= */
 .admin-message {
@@ -246,4 +228,25 @@ body {
     border-radius: 2px;
     vertical-align: middle;
     padding-right: 10px;
+}
+
+/* =======================================================
+   UserEO info
+======================================================= */
+.userEOinfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 50px;
+    background-color: rgba(255,255,255,0.9);
+}
+.userEOinfo-des {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+.userEOinfo-des b {
+    font-weight: normal;
+    color: #000;
 }
