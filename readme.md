@@ -1,6 +1,6 @@
 
-<div style="text-align: center">
-<h1>Socket-chat</h1>
+<div align="center">
+    <h1>Socket-chat</h1>
 </div>
 ## Installation
 <pre>
