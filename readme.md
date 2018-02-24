@@ -2,6 +2,7 @@
 <div align="center">
     <h1>Socket-chat</h1>
     <p>Socket.io 实现的多人聊天室，包含在线列表，进出广播提醒</p>
+    ![Image text](https://github.com/Clayeo/socket-chat/demo/demo.gif?raw=true)
 </div>
 
 ## Installation
