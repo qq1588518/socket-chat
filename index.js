@@ -30,15 +30,17 @@ io.on('connection', (socket) => {
             username: msg.username,
             useravatar: msg.useravatar
         });
-        io.emit('addUser success',users);
+        io.emit('addUser success',msg);
     });
     // 监听在线用户
     socket.on('show online', (msg) => {
         io.emit('show online',users);
     });
+    // 监听用户进出
+    socket.on('userEO', (msg) => {
+        io.emit('userEO', msg);
+    })
 });
-
-
 
 http.listen(3000, () => {
     console.log('listening on *:3000');
