@@ -6,7 +6,8 @@
         onlinePeopleButton: $("#online-people"),
         mainContentArea:  $(".chat-content .content-list"),
         onlinePeopleFloatBox: $(".online-people-flbox"),
-        onlinePeopleFloatBoxList: $(".online-people-flbox .online-list")
+        onlinePeopleFloatBoxList: $(".online-people-flbox .online-list"),
+        userEOinfo: $(".userEOinfo")
     }
 
     // 工具函数
@@ -81,12 +82,34 @@
     // 监听添加成功消息
     socket.on('addUser success', (msg) => {
         DOM.chatlead.hide();
+        userEO(msg);
     });
 
     // 监听添加失败消息
     socket.on('addUser error', (msg) => {
         alert("已有同名用户")
     })
+
+    // 用户进出广播
+    function userEO (msg) {
+        socket.emit('userEO', {
+            username: msg.username
+        });
+    }
+
+    // 监听用户进出
+    socket.on('userEO', (msg) => {
+        DOM.userEOinfo.find("p").text(`明星${msg.username}进入了聊天室`)
+        DOM.userEOinfo.animate({
+            opacity: 1,
+        },700)
+        setTimeout(() => {
+            DOM.userEOinfo.animate({
+                opacity: 0,
+            },700)
+        },1000)
+    })
+
     
     var ifs = true;
 
