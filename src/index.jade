@@ -10,12 +10,13 @@ html(lang='en')
   body
     .container
       section.chat-box
+        .userEOinfo
+            p.userEOinfo-des 明星<b>“河北省的元首”</b>进入了聊天室
         .chat-content
             ul.content-list
-        .chat-tip
         form.chat-control
             .form-group
-                input#user-content.user-content(type='text', placeholder='输入聊天内容', autocomplete='off')
+                input#user-content.user-content(type='text', placeholder='输入聊天内容', autocomplete='off', required='required')
                 button#send-button.send-button(type='submit') 发送
                 button#online-people.online-people(type='button', title='在线用户')
                     i.iconfont.icon-people
@@ -64,7 +65,7 @@ html(lang='en')
                         img.user-avatarImg(src='images/avatars/12.jpg', alt='傅园慧')
                 button.enter-chat 加入 ♂ 聊天
         .online-people-flbox
-            ul.online-list
+            ul.online-list 
         
     script(src='js/lib/socket.io.js')
     script(src='js/lib/zepto.min.js')
