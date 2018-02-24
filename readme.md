@@ -1,13 +1,14 @@
 
 <div align="center">
     <h1>Socket-chat</h1>
+    <p>Socket.io 实现的多人聊天室，包含在线列表，进出广播提醒</p>
 </div>
 
 ## Installation
 <pre>
-    git clone https://github.com/Clayeo/socket-chat.git
-    cd socket-chat
-    node index.js
+git clone https://github.com/Clayeo/socket-chat.git
+cd socket-chat
+node index.js
 </pre>
 ## Extend
 1. ~~用户头像~~
