@@ -2,6 +2,7 @@
 <div align="center">
     <h1>Socket-chat</h1>
 </div>
+
 ## Installation
 <pre>
     git clone https://github.com/Clayeo/socket-chat.git
