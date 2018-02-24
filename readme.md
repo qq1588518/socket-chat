@@ -1,4 +1,4 @@
-# Socket-chat
+# **Socket-chat**
 ### Installation
 <pre>
     git clone https://github.com/Clayeo/socket-chat.git
