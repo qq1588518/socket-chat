@@ -1,4 +1,7 @@
+
+<div style="text-align: center">
 # **Socket-chat**
+</div>
 ## Installation
 <pre>
     git clone https://github.com/Clayeo/socket-chat.git
